@@ -1,0 +1,12 @@
+#!/bin/bash
+
+empty=""
+if [ -n "$(g++ -std=c++17 -o autograder/main main.cpp 2>&1)" ]; then
+    empty="empty"
+else
+    rm autograder/main
+fi
+
+g++ -std=c++17 -o autograder/rename_main autograder/rename_main.cpp
+./autograder/rename_main main.cpp autograder/gen/dummy_main.cpp $empty
+rm autograder/rename_main
