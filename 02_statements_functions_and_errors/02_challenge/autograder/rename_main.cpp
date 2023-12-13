@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <filesystem>
 
 void rename_main_function(const std::string& input_filepath, const std::string& output_filepath, bool empty = false) {
     std::filesystem::path dir = std::filesystem::path(output_filepath).parent_path();
@@ -10,7 +11,7 @@ void rename_main_function(const std::string& input_filepath, const std::string& 
             return;
         }
     }
-    
+
     std::ofstream output_file(output_filepath);
     if (!output_file.is_open()) {
         std::cerr << "Failed to open output file." << std::endl;

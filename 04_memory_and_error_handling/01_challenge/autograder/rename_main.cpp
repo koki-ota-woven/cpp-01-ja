@@ -3,6 +3,7 @@
 #include <string>
 #include <algorithm>
 #include <cctype>
+#include <filesystem>
 #include <sstream>
 #include <vector>
 
@@ -72,7 +73,7 @@ void rename_main_function(const std::string& input_filepath, const std::string& 
             return;
         }
     }
-    
+
     std::ofstream output_file(output_filepath);
     if (!output_file.is_open()) {
         std::cerr << "Failed to open output file." << std::endl;
