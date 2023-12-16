@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string.h>
 
-int dummy_main(){
+int main(){
     float num1;
     std::string operation;
     float num2;
