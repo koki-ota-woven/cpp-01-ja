@@ -10,7 +10,6 @@ int main() {
 
     int* p = &x;
 
-    std::cout << p << std::endl;
     std::cout << *p << std::endl;
 
     return 0;
