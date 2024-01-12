@@ -20,8 +20,8 @@ int main() {
 
     // コードを入力してください
     try {
-        int number = element_at(numbers, input_index);
-        std::cout << "The number at the index is " << number << std::endl;
+        int element = element_at(numbers, input_index);
+        std::cout << "The element at the index is " << element << std::endl;
     } catch(const std::out_of_range& e){
         std::cout << e.what() << std::endl;
     }
