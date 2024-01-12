@@ -12,15 +12,21 @@ std::vector<int> double_elements(const std::vector<int>& numbers){
     // for (int i = 0; i < numbers.size(); ++i) {
     //     new_numbers.push_back(numbers[i] * 2);
     // }
-    for (auto i = std::begin(numbers); i != std::end(numbers); ++i) {
-        new_numbers.push_back(*i * 2);
+    for (int i: numbers){
+        new_numbers.push_back(i * 2);
     }
+    // for (auto i = std::begin(numbers); i != std::end(numbers); ++i) {
+    //     new_numbers.push_back(*i * 2);
+    // }
     return new_numbers;
 }
 
 void print_numbers(std::string title, const std::vector<int>& array){
-    for (auto i = std::begin(array); i != std::end(array); ++i){
-        std::cout << title << ": " << *i << std::endl;
+    // for (auto i = std::begin(array); i != std::end(array); ++i){
+    //     std::cout << title << ": " << *i << std::endl;
+    // }
+    for (int element: array){
+        std::cout << title << ": " << element << std::endl;
     }
 }
 
