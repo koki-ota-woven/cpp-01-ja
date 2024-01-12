@@ -16,9 +16,11 @@ std::vector<int> double_elements(const std::vector<int>& numbers){
 }
 
 void print_numbers(std::string title, const std::vector<int>& array){
+    std::cout << title << ": ";
     for (int element: array){
-        std::cout << title << ": " << element << std::endl;
+        std::cout << element << " ";
     }
+    std::cout << std::endl;
 }
 
 int main() {
